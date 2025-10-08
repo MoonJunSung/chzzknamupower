@@ -1,0 +1,207 @@
+:root {
+  --bg: #0b1020;
+  --panel: #111935;
+  --text: #e6ecff;
+  --muted: #9fb0ff;
+  --accent: #5b82ff;
+  --accent-2: #39d98a;
+  --sidebar: #0e1429;
+  --border: rgba(255,255,255,0.12);
+  --border-weak: rgba(255,255,255,0.06);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  width: 360px;
+  min-height: 360px;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app { display:flex; min-height: 100%; }
+.sidebar {
+  width: 96px;
+  background: var(--sidebar);
+  box-shadow: inset -1px 0 0 var(--border-weak);
+  display:flex;
+  flex-direction:column;
+  padding: 12px 8px;
+}
+.brand { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+.brand-logo { width: 20px; height: 20px; }
+.brand-text { display:flex; flex-direction:column; }
+.brand-name { font-weight:700; font-size:12px; }
+.brand-ver { font-size:10px; color: var(--muted); }
+.nav { display:flex; flex-direction:column; gap:6px; }
+.nav-item { background: transparent; color: var(--text); border:1px solid var(--border); border-radius:8px; padding:8px 6px; cursor:pointer; font-size:12px; }
+.nav-item.active { background: #1a2447; border-color:#2a3a74; }
+.content { flex:1; padding: 14px; }
+.panel.hidden { display:none; }
+.section { display:flex; flex-direction:column; gap:10px; }
+.card { background: var(--panel); border:1px solid var(--border); border-radius:10px; padding:10px; }
+
+.title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.05);
+}
+
+.result {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  white-space: pre-wrap;
+}
+
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 4px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.pill {
+  background: #111935;
+  border: 1px solid var(--border);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.pill-label { font-weight: 700; }
+.pill-count { font-weight: 700; }
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ranking .list-item {
+  display: grid;
+  grid-template-columns: 24px 28px 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.rank {
+  font-weight: 700;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  object-fit: cover;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 홈 패널 토글 목록 간격 */
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* switch */
+.switch { appearance: none; width: 34px; height: 20px; background:#2a355f; border:1px solid var(--border); border-radius:999px; position:relative; cursor:pointer; outline:none; }
+.switch:before { content:''; position:absolute; left:2px; top:2px; width:14px; height:14px; background:#94a3ff; border-radius:50%; transition: transform .18s ease; }
+.switch:checked { background:#3550ff; }
+.switch:checked:before { transform: translateX(14px); background:#fff; }
+

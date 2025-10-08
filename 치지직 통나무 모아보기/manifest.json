@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "치지직 통나무 파워 모아보기",
+  "description": "치지직 통나무 파워 모아보기 확장 프로그램입니다.",
+  "version": "1.0.4",
+  "action": {
+    "default_title": "치지직 통나무 파워 모아보기",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/logo.png",
+      "24": "icons/logo.png",
+      "32": "icons/logo.png"
+    }
+  },
+  "icons": {
+    "16": "icons/logo.png",
+    "48": "icons/logo.png",
+    "128": "icons/logo.png"
+  },
+  
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chzzk.naver.com/*",
+        "*://*.chzzk.naver.com/*",
+        "*://*.chzzk.com/*",
+        "*://chzzk.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.chzzk.naver.com/*"
+  ]
+}
+

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>치지직 통나무 파워 모아보기</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="icons/logo.png" alt="logo" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">모아보기</div>
+            <div class="brand-ver">v1.0.4</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav-item active" data-target="panel-home">홈</button>
+          <button class="nav-item" data-target="panel-settings">설정</button>
+        </nav>
+      </aside>
+      <section class="content">
+        <header class="header">
+          <h1 class="title">치지직 통나무 파워 모아보기</h1>
+        </header>
+
+        <div id="panel-home" class="panel">
+          <section class="section">
+            <h2 class="subtitle">홈</h2>
+            <div class="card">
+              <button id="btn-open-balances" class="pill"><span class="pill-label">통나무</span> <span id="current-count" class="pill-count">?</span></button>
+            </div>
+            <div class="section-list">
+              <label class="settings-row">
+                <span>배지 표시</span>
+                <input id="opt-badge" type="checkbox" class="switch">
+              </label>
+              <label class="settings-row">
+                <span>자동 수집</span>
+                <input id="opt-auto" type="checkbox" class="switch">
+              </label>
+              <label class="settings-row">
+                <span>항상 최고 화질</span>
+                <input id="opt-best" type="checkbox" class="switch">
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div id="panel-settings" class="panel hidden">
+          <section class="section">
+            <h2 class="subtitle">설정</h2>
+            
+          </section>
+        </div>
+
+        <footer class="footer">Made with Party0416</footer>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
+
