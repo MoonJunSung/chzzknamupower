@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>치지직 통나무 파워 모아보기</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <img src="icons/logo.png" alt="logo" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">모아보기</div>
+            <div class="brand-ver">v1.0.8</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav-item active" data-target="panel-home">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            홈
+          </button>
+          <button class="nav-item" data-target="panel-settings">
+            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            설정
+          </button>
+        </nav>
+      </aside>
+      <section class="content">
+        <header class="header">
+          <h1 class="title">치지직 통나무 파워 모아보기</h1>
+        </header>
+
+        <div id="panel-home" class="panel">
+          <section class="section">
+            <h2 class="subtitle">대시보드</h2>
+            <div class="card">
+              <button id="btn-open-balances" class="pill">
+                <span class="pill-label">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:20px;height:20px;color:#fcd34d">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                  </svg>
+                  통나무
+                </span> 
+                <span id="current-count" class="pill-count">...</span>
+              </button>
+            </div>
+            <div class="section-list">
+              <label class="settings-row">
+                <span>배지 표시</span>
+                <input id="opt-badge" type="checkbox" class="switch">
+              </label>
+              <label class="settings-row">
+                <span>자동 수집</span>
+                <input id="opt-auto" type="checkbox" class="switch">
+              </label>
+              <label class="settings-row">
+                <span>항상 최고 화질</span>
+                <input id="opt-best" type="checkbox" class="switch">
+              </label>
+              <label class="settings-row">
+                <span>채팅 초시계(카운트다운)</span>
+                <input id="opt-countdown" type="checkbox" class="switch">
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div id="panel-settings" class="panel hidden">
+          <section class="section">
+            <h2 class="subtitle">설정</h2>
+            
+          </section>
+        </div>
+
+
+        <footer class="footer">Made with Party0416</footer>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
+
